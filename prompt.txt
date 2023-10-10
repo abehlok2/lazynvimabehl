@@ -1,0 +1,12 @@
+Please help me to write a python script using the python library "openpyxl" to manipulate some excel files. The workbook called "CRYO MODIFIED.xlsx" is the target workbook that will be receiving data from the sheet named "6582 Data Sheet A.xlsx" 
+
+First, the user will input a two-digit integer value, the "slide position" which is the capsule's position on the microscope slide. 
+
+In the data source file, the last one or two characters of column "B" (depends on if the position is under 10 or not) are integers that correspond to that data sheet's microscope slide and slide positions . 
+
+The script must take the user's input, find the corresponding row in column "C" (based on the last 2 digits). It will then take the data from some of the columns in the data sheet, 
+["C"(str), "D"(str)", "J"(int), "K"(int), "Q"(float)]
+
+Then, the script will create a temporary copy of the CRYO MODIFIED.xlsx workbook to add the changes to to make sure not to accidentally corrupt the actual master spreadsheet during testing. It will save this temp copy permanently if the user specifies in the same directory. 
+
+It will take the data from the data source sheet and add it to the next open row in the corresponding column in the 'CRYO MODIFIED.xlsx' workbook, sheet name = "type1e". 
